@@ -60,7 +60,7 @@ export const AppContextProvider = ({ children }) => {
             toast.success("Login successful");
             return true;
         } catch (error) {
-            toast.error(error.response.data.message);
+            toast.error(error.response.data.error);
         }
     };
 
@@ -75,7 +75,7 @@ export const AppContextProvider = ({ children }) => {
             toast.success("Signup successful");
             return true;
         } catch (error) {
-            toast.error(error.response.data.message);
+            toast.error(error.response.data.error);
         }
     };
 
@@ -94,7 +94,7 @@ export const AppContextProvider = ({ children }) => {
             );
             setUser(data);
         } catch (error) {
-            toast.error(error.response.data.message);
+            toast.error(error.response.data.error);
         }
     };
 
@@ -108,7 +108,7 @@ export const AppContextProvider = ({ children }) => {
             const { data } = await axiosInstance.get("/posts");
             setPosts(data);
         } catch (error) {
-            toast.error(error.response.data.message);
+            toast.error(error.response.data.error);
         }
     };
 
@@ -132,7 +132,7 @@ export const AppContextProvider = ({ children }) => {
             toast.success("Post created successfully");
             return true;
         } catch (error) {
-            toast.error(error.response.data.message);
+            toast.error(error.response.data.error);
         }
     };
 
@@ -141,7 +141,7 @@ export const AppContextProvider = ({ children }) => {
             const { data } = await axiosInstance.get(`/posts/${postId}`);
             return data;
         } catch (error) {
-            toast.error(error.response.data.message);
+            toast.error(error.response.data.error);
         }
     };
 
@@ -161,7 +161,7 @@ export const AppContextProvider = ({ children }) => {
             toast.success("Post updated successfully");
             return true;
         } catch (error) {
-            toast.error(error.response.data.message);
+            toast.error(error.response.data.error);
         }
     };
 
@@ -175,7 +175,7 @@ export const AppContextProvider = ({ children }) => {
             toast.success("Post deleted successfully");
             return true;
         } catch (error) {
-            toast.error(error.response.data.message);
+            toast.error(error.response.data.error);
         }
     };
 
