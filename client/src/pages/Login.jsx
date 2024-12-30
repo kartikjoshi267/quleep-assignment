@@ -53,7 +53,21 @@ const Login = () => {
                         Login
                     </button>
                 </div>
-                <div className="pt-4">
+                <div>
+                    <h4 className="text-sm font-medium text-rose-700">
+                        Please note that the server is hosted on a free service
+                        so takes time (upto 1 minute) to load and process
+                        request
+                    </h4>
+                    <div className="pt-2 text-sm">
+                        <h4 className="text-md font-medium text-gray-500">
+                            Test Accounts
+                        </h4>
+                        <p>Email: test@test.com &nbsp;&nbsp;Password: test</p>
+                        <p>Email: test2@test.com &nbsp;&nbsp;Password: test2</p>
+                    </div>
+                </div>
+                <div className="pt-2">
                     <div className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
                         Don't have an account?{" "}
                         <span
