@@ -50,7 +50,7 @@ router.get("/posts", async (req, res) => {
 router.put("/posts/:id", authenticate, async (req, res) => {
   try {
     const blog = await Blogs.findById(req.params.id);
-    if (blog.author !== req.user.user.id) {
+    if (blog.author != req.user.user.id) {
       return res.status(401).json({ error: "Unauthorized" });
     }
 
